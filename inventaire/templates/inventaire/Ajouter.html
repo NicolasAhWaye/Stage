@@ -1,0 +1,27 @@
+{% extends 'inventaire/base.html' %}
+ {% block content %}
+    <div class="card shadow mb-4">
+        <!-- Card Header - Accordion -->
+        <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse"
+           role="button" aria-expanded="true" aria-controls="collapseCardExample">
+            <h6 class="m-0 font-weight-bold text-primary">Ajouter ou Modifier un produit</h6>
+        </a>
+        <!-- Card Content - Collapse -->
+        <div class="collapse show" id="collapseCardExample">
+            <div class="card-body">
+                <form class="form-inline" action="{% url 'inventaire:ajouter'%}" method="post">
+                     {% csrf_token %}
+                <div class="form-group">
+                    <label for="name" class="control-label">GTIN</label>
+                    <input type="text" name="name" value="" id="GTIN">
+                </div>
+                <div class="form-group">
+                    <label for="date" class="control-label">Date</label>
+                    <input type="date" name="date" value="" id="date">
+                </div>
+                <button type="submit" class="btn btn-success">Valider</button>
+                </form>
+            </div>
+        </div>
+    </div>
+ {% endblock %}

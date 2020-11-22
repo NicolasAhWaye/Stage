@@ -1,0 +1,6 @@
+<ul>
+<li>Liste des Produits :</li>
+{% for gtin in gtins %}
+    <li>{{ gtin.numero}}     {{ gtin.date_expiration }}</li>
+{% endfor %}
+</ul>
