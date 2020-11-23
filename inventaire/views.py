@@ -38,11 +38,11 @@ def ajouter(request):
             gtin = form.cleaned_data['gtin']
             date = form.cleaned_data['date']
 
-            produit = GTIN.objects.filter(gtin=gtin)
+            produit = GTIN.objects.filter(numero=gtin)
             if not produit.exists():
                                         gtin = GTIN.objects.create(
-                                        gtin=gtin,
-                                        date=date
+                                        numero=gtin,
+                                        date_expiration=date
                                         )
             else:
                                         produit.date_expiration = date
