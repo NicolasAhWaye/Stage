@@ -5,6 +5,7 @@ connection à la base de donnée
 faire la commande ./manage.py makemigrations
 puis ./manage.py migrate
 et ./manage.py runserver
+dans setting.py ne pas oublier de mettre dans ALLOW
 
 Temps estimé:15h
 3h: réflexion de l'architecture
