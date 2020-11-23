@@ -40,7 +40,7 @@ def ajouter(request):
 
             produit = GTIN.objects.filter(numero=gtin)
             if not produit.exists():
-                                        gtin = GTIN.objects.create(
+                                        produit = GTIN.objects.create(
                                         numero=gtin,
                                         date_expiration=date
                                         )
